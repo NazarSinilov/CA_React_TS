@@ -5,23 +5,31 @@ interface Props {
 
 }
 
-const fetchData = async () => {
-  try {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-    const json = res.json();
-    return json;
-  } catch (err) {
-    console.log(err);
-  }
-}
-
 const GetData: FC<Props> = () => {
   const [data, setData] = useState([]);
+  const [isLoad, setIsLoad] = useState(true);
+
+  const fetchData = async () => {
+    try {
+      const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+      const json = res.json();
+      return json;
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   useEffect(() => {
-    fetchData().then((res) => setData(res));
+    setIsLoad(true);
+    fetchData().then((res) => {
+      setData(res)
+      setIsLoad(false);
+    });
   }, []);
 
+  if (isLoad) {
+    return <WithLoadingIndicator />
+  }
   return (
     <div>
          <ul>
@@ -34,4 +42,4 @@ const GetData: FC<Props> = () => {
 };
 
 
-export default WithLoadingIndicator(GetData, fetchData);
+export default GetData;

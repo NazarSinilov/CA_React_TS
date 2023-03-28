@@ -1,9 +1,9 @@
 import React from 'react';
-import {Modal} from './Modal/Modal';
- 
+import { Modal } from './Modal/Modal';
+
 function App() {
   return (
-    <div >
+    <div className="App">
       <Modal text='Close'/>
     </div>
   );

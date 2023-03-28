@@ -2,7 +2,6 @@ import React, { FC, useEffect, useState } from 'react';
 import {WithLoadingIndicator} from './WithLoadingIndicator';
 
 interface Props {
-
 }
 
 const fetchData = async () => {

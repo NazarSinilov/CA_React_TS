@@ -1,5 +1,5 @@
 {
-  "name": "task-1",
+  "name": "task-3",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,9 +12,8 @@
     "@types/react-dom": "^18.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-loader-spinner": "^5.3.4",
     "react-scripts": "5.0.1",
-    "react-spinners": "^0.13.8",
+    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -40,15 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.57.0",
-    "eslint": "^8.36.0",
-    "eslint-config-standard-with-typescript": "^34.0.1",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^15.6.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.32.2",
-    "typescript": "^5.0.2"
   }
 }
